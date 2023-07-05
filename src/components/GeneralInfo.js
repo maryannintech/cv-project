@@ -3,8 +3,8 @@ import "../styles/Fonts.css";
 import "../styles/GeneralInfo.css";
 
 class GeneralInfo extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
   }
   render() {
     return (
