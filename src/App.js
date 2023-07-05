@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Title title = "CV CREATOR"></Title>
+        <Title title="ResuBuilder" tagline="Craft Your CV with Ease"></Title>
       </div>
     );
   }

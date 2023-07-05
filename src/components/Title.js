@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../styles/Title.css";
+import "../styles/Fonts.css";
 
 class Title extends Component {
   constructor(props) {
@@ -7,11 +8,12 @@ class Title extends Component {
   }
 
   render() {
+    const { title, tagline } = this.props;
     return (
-      <div>
+      <div className="app-name">
         <h1>{this.props.title}</h1>
         <div>
-            <h2></h2>
+          <h2>{this.props.tagline}</h2>
         </div>
       </div>
     );

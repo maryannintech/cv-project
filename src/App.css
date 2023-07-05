@@ -1,1 +1,6 @@
-
+body {
+    background-image: url(./svgs/body-bg.svg);
+    /* background by SVGBackgrounds.com */
+    background-position: center;
+    background-size: cover;
+}
