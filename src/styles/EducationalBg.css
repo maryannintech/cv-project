@@ -5,12 +5,18 @@
     gap: 20px;
 }
 
+.education-bg > h1 {
+    background-color: #6aac5f;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
 input {
     border-radius: 10px;
     display: flex;
     align-items: center;
     font-size: 1rem;
-    border: none;
+    border: 2px solid #091103;
 }
 
 input[type="date"] {
