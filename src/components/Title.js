@@ -14,7 +14,8 @@ class Title extends Component {
           <h1>{title}</h1>
           <h3>{tagline}</h3>
         </div>
-        <div></div>
+        <div>
+        </div>
       </div>
     );
   }
