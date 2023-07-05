@@ -19,13 +19,13 @@ class GeneralInfo extends Component {
           </div>
           <div className="title-input">
             <label htmlFor="title">Title: </label>
-            <input type="text" id="title"></input>
+            <input type="text" id="title" required></input>
           </div>
           <div className="contact">
             <label htmlFor="email">Email: </label>
-            <input type="email" id="email"></input>
+            <input type="email" id="email" required></input>
             <label htmlFor="number">Phone number: </label>
-            <input type="tel" id="number"></input>
+            <input type="tel" id="number" required></input>
           </div>
         </form>
       </div>

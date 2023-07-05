@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Title from "./components/Title";
 import "./App.css";
-import GeneralInfo from "./components/GeneralInfo";
+import Title from "./components/Title";
+import Forms from "./components/Form";
 
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <Title title="ResuBuilder" tagline="Craft Your CV with Ease"></Title>
-        <GeneralInfo></GeneralInfo>
+        <Forms></Forms>
       </div>
     );
   }
