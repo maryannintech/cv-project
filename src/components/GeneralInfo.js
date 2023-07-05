@@ -11,8 +11,8 @@ class GeneralInfo extends Component {
       <div className="gen-form">
         <h1>PERSONAL INFORMATION</h1>
         <form>
-          <label htmlFor="first-name">First Name: </label>
           <div className="names">
+            <label htmlFor="first-name">First Name: </label>
             <input type="text" id="first-name" required></input>
             <label htmlFor="last-name">Last Name: </label>
             <input type="text" id="last-name" required></input>
