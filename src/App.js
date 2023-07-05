@@ -1,9 +1,17 @@
 import React, { Component } from "react";
-import './App.css';
+import Title from "./components/Title";
+import "./App.css";
 
 class App extends Component {
+  constructor() {
+    super();
+  }
   render() {
-    return <div>Hello World</div>;
+    return (
+      <div>
+        <Title title = "CV CREATOR"></Title>
+      </div>
+    );
   }
 }
 
