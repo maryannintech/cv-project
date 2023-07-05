@@ -8,9 +8,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
         <Title title="ResuBuilder" tagline="Craft Your CV with Ease"></Title>
-      </div>
     );
   }
 }

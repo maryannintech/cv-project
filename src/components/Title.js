@@ -6,14 +6,13 @@ class Title extends Component {
   constructor(props) {
     super(props);
   }
-
   render() {
     const { title, tagline } = this.props;
     return (
       <div className="app-name">
-        <h1>{this.props.title}</h1>
+        <h1>{title}</h1>
         <div>
-          <h2>{this.props.tagline}</h2>
+          <h2>{tagline}</h2>
         </div>
       </div>
     );
