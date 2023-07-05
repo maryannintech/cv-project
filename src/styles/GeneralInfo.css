@@ -1,7 +1,23 @@
 h1 {
     text-align: center;
+    margin-top: 0;
+}
+
+.gen-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 input {
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
 }
+
+form {
+    margin: auto;
+    font-size: 1.25rem;
+}
+

@@ -10,10 +10,11 @@ class Title extends Component {
     const { title, tagline } = this.props;
     return (
       <div className="app-name">
-        <h1>{title}</h1>
-        <div>
-          <h2>{tagline}</h2>
+        <div className="container">
+          <h1>{title}</h1>
+          <h3>{tagline}</h3>
         </div>
+        <div></div>
       </div>
     );
   }
