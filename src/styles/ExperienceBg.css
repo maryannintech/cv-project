@@ -23,3 +23,21 @@ form {
     margin: auto;
     font-size: 1.25rem;
 }
+
+.exp-btns > button {
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #96ac58;
+}
+
+.exp-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
