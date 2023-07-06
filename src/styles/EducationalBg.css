@@ -6,9 +6,10 @@
 }
 
 .education-bg > h1 {
-    background-color: #6aac5f;
+    background-color: #012A4A;
     padding: 0 10px;
     border-radius: 10px;
+    color: white;
 }
 
 input {
@@ -34,7 +35,7 @@ form {
     border: none;
     font-size: 1.2rem;
     font-weight: 600;
-    background-color: #96ac58;
+    background-color: #A9D6E5;
 }
 
 .educ-btns {

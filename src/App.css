@@ -4,4 +4,6 @@ body {
     background-position: center;
     background-size: cover;
     padding-bottom: 30px;
+    background-repeat: no-repeat;
+    background-color: #012A4A;
 }

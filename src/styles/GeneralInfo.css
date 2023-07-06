@@ -10,9 +10,10 @@ h1 {
 }
 
 .gen-form > h1 {
-    background-color: #6aac5f;
+    background-color: #012A4A;
     padding: 0 10px;
     border-radius: 10px;
+    color: white;
 }
 
 input {
