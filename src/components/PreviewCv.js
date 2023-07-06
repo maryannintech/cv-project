@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Title.css";
+import "../styles/PreviewCv.css";
 import "../styles/Fonts.css";
 
 function PreviewCv() {

@@ -27,3 +27,19 @@ form {
     margin: auto;
     font-size: 1.25rem;
 }
+
+.educ-btns > button {
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #96ac58;
+}
+
+.educ-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
