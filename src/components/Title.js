@@ -8,7 +8,7 @@ function Title(props) {
   const { title, tagline } = props;
   const [isShown, setIsShown] = useState(false);
   function showPreviewCV() {
-    setIsShown((current) => !current);
+    setIsShown(current => !current);
   }
   return (
     <div className="app-name">
@@ -20,7 +20,9 @@ function Title(props) {
         <button className="preview-cs" onClick={showPreviewCV}>
           PREVIEW
         </button>
-        {isShown && <PreviewCv></PreviewCv>}
+        {isShown && (
+            <PreviewCv></PreviewCv>
+        )}
       </div>
     </div>
   );
