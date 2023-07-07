@@ -2,14 +2,7 @@ import React from "react";
 import "../styles/PreviewCv.css";
 import "../styles/Fonts.css";
 
-function PreviewCv() {
-  let genInfo = {
-    firstname: "",
-    lastname: "",
-    title: "",
-    email: "",
-    phonenumber: "",
-  };
+function PreviewCv({genInfo}) {
   return (
     <div className="preview-cv">
       <div className="genInfo">
