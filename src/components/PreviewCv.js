@@ -1,10 +1,12 @@
 import React from "react";
 import "../styles/PreviewCv.css";
 import "../styles/Fonts.css";
+import { PassGenInfo } from "./GeneralInfo";
 
 function PreviewCv() {
   return (
     <div className="preview-cv">
+      <PassGenInfo></PassGenInfo>
       <p className="educ-title">EDUCATIONAL BACKGROUND</p>
       <hr></hr>
       <div className="educBG">

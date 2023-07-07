@@ -26,7 +26,13 @@ function GeneralInfo() {
     <div className="gen-form">
       <h1>PERSONAL INFORMATION</h1>
       <form>
-        <GenPreview email={values.email} mobile={values.phoneNumber} firstname={values.firstName} lastname={values.lastName} title={values.title}/>
+        <GenPreview
+          email={values.email}
+          mobile={values.phoneNumber}
+          firstname={values.firstName}
+          lastname={values.lastName}
+          title={values.title}
+        ></GenPreview>
         <div className="names">
           <label htmlFor="first-name">First Name: </label>
           <input
@@ -59,6 +65,15 @@ function GeneralInfo() {
           ></input>
         </div>
         <div className="contact">
+          <label htmlFor="phoneNumber">Phone number: </label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            value={values.phoneNumber}
+            onChange={handleInputChange}
+            required
+          ></input>
           <label htmlFor="email">Email: </label>
           <input
             type="email"
@@ -68,21 +83,10 @@ function GeneralInfo() {
             onChange={handleInputChange}
             required
           ></input>
-          <label htmlFor="number">Phone number: </label>
-          <input
-            type="tel"
-            id="number"
-            name="number"
-            value={values.phoneNumber}
-            onChange={handleInputChange}
-            required
-          ></input>
         </div>
       </form>
     </div>
   );
 }
-
-
 
 export default GeneralInfo;

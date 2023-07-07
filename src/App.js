@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import Title from "./components/Title";
 import Forms from "./components/Form";
-import PreviewCv from "./components/PreviewCv";
 
 class App extends Component {
   constructor() {
