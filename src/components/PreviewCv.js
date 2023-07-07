@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/PreviewCv.css";
 import "../styles/Fonts.css";
-import { PassGenInfo } from "./GeneralInfo";
+import PassGenInfo from "./PassGenInfo";
 
 function PreviewCv() {
   return (

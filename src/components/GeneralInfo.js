@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Fonts.css";
 import "../styles/GeneralInfo.css";
 import { useState } from "react";
-import GenPreview from "./GenPreview";
+import PassGenInfo from "./PassGenInfo";
 
 function GeneralInfo() {
   const genInfo = {
@@ -22,17 +22,11 @@ function GeneralInfo() {
       [name]: value,
     });
   };
+
   return (
     <div className="gen-form">
       <h1>PERSONAL INFORMATION</h1>
       <form>
-        <GenPreview
-          email={values.email}
-          mobile={values.phoneNumber}
-          firstname={values.firstName}
-          lastname={values.lastName}
-          title={values.title}
-        ></GenPreview>
         <div className="names">
           <label htmlFor="first-name">First Name: </label>
           <input
@@ -85,6 +79,7 @@ function GeneralInfo() {
           ></input>
         </div>
       </form>
+      <PassGenInfo values={values} />
     </div>
   );
 }
