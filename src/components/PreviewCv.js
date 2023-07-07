@@ -1,8 +1,9 @@
 import React from "react";
 import "../styles/PreviewCv.css";
 import "../styles/Fonts.css";
+import GeneralInfo from "./GeneralInfo";
 
-function PreviewCv({genInfo}) {
+function PreviewCv() {
   return (
     <div className="preview-cv">
       <div className="genInfo">
