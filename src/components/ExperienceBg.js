@@ -31,7 +31,7 @@ function ExperienceForm() {
         <input type="text" id="company-name" required></input>
         <label htmlFor="position">Position: </label>
         <input type="text" id="position" required></input>
-        <label htmlFor="tasks">Main tasks: </label>
+        <label htmlFor="tasks">Location: </label>
         <input type="text" id="tasks" required></input>
         <label htmlFor="job-started">Started working: </label>
         <input type="date" id="job-started" required></input>

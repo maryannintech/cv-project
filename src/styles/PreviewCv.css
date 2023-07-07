@@ -7,3 +7,64 @@
     color: #091103;
     margin-top: 20px;
 }
+
+.preview-cv > p {
+    margin: 15px 0;
+}
+
+.contacts > p {
+    margin: 0;
+}
+
+.contacts {
+    margin-bottom: 10px;
+}
+
+.genInfo > p {
+    margin: 0;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.educ-title,
+.exp-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.educBG,
+.expBG {
+    padding-left: 10px;
+}
+
+.educBG > p {
+    margin: 0;
+}
+
+.expBG > p {
+    margin: 0;
+}
+
+.school-dates,
+.company-dates {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.school-dates > p {
+    margin: 0;
+}
+
+.company-dates > p {
+    margin: 0;
+}
+
+hr {
+    height: 2px;
+    background-color: #091103;
+    border: none;
+}
