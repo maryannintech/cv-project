@@ -2,8 +2,7 @@ import React from "react";
 import "../styles/Title.css";
 import "../styles/Fonts.css";
 
-function Title(props) {
-  const { title, tagline } = props;
+function Title({title, tagline}) {
   return (
     <div className="app-name">
       <div className="container">
