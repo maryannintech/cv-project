@@ -13,7 +13,6 @@ class App extends Component {
       <div>
         <Title title="ResuBuilder" tagline="Craft Your CV with Ease"></Title>
         <Forms></Forms>
-        <PreviewCv></PreviewCv>
       </div>
     );
   }

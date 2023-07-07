@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Fonts.css";
 import "../styles/GeneralInfo.css";
 import { useState } from "react";
+import GenPreview from "./GenPreview";
 
 function GeneralInfo() {
   const genInfo = {
@@ -14,8 +15,6 @@ function GeneralInfo() {
 
   const [values, setValues] = useState(genInfo);
   const handleInputChange = (e) => {
-    //const name = e.target.name
-    //const value = e.target.value
     const { name, value } = e.target;
 
     setValues({
@@ -27,6 +26,7 @@ function GeneralInfo() {
     <div className="gen-form">
       <h1>PERSONAL INFORMATION</h1>
       <form>
+        <GenPreview email={values.email} mobile={values.phoneNumber} firstname={values.firstName} lastname={values.lastName} title={values.title}/>
         <div className="names">
           <label htmlFor="first-name">First Name: </label>
           <input
@@ -42,7 +42,7 @@ function GeneralInfo() {
             type="text"
             id="last-name"
             name="lastName"
-            value={values.lastNameName}
+            value={values.lastName}
             onChange={handleInputChange}
             required
           ></input>
@@ -82,5 +82,7 @@ function GeneralInfo() {
     </div>
   );
 }
+
+
 
 export default GeneralInfo;
