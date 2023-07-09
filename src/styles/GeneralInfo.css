@@ -29,4 +29,7 @@ form {
     font-size: 1.25rem;
 }
 
+.hide {
+    display: none;
+}
 

@@ -1,11 +1,15 @@
 import React from "react";
 import "../styles/Fonts.css";
 import "../styles/GeneralInfo.css";
-import GenPreview from "./GenPreview";
+import PreviewCv from "./PreviewCv";
 
 function GeneralInfo({values, handleInputChange}) {
+  if (!values) {
+    // Handle the case when values is undefined or falsy
+    return null;
+  }
   return (
-    <div className="gen-form hide">
+    <div className="gen-form">
       <h1>PERSONAL INFORMATION</h1>
       <form>
         <div className="names">
@@ -60,8 +64,8 @@ function GeneralInfo({values, handleInputChange}) {
           ></input>
         </div>
       </form>
-      <div className="gen-preview">
-        <GenPreview values={values}></GenPreview>
+      <div className="gen-preview hide">
+        <PreviewCv values={values}></PreviewCv>
       </div>
     </div>
   );

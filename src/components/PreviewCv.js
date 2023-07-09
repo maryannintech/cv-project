@@ -1,30 +1,24 @@
 import React from "react";
 import "../styles/PreviewCv.css";
 import "../styles/Fonts.css";
-import { useState } from "react";
-import GeneralInfo from "./GeneralInfo";
 
-function PreviewCv() {
-  const genInfo = {
-    firstName: "",
-    lastName: "",
-    title: "",
-    email: "",
-    phoneNumber: "",
-  };
-
-  const [values, setValues] = useState(genInfo);
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-
-    setValues({
-      ...values,
-      [name]: value,
-    });
-  };
+function PreviewCv({ values }) {
+  if (!values) {
+    // Handle the case when values is undefined or falsy
+    return null;
+  }
   return (
     <div className="preview-cv">
-      <GeneralInfo values={values} handleInputChange={handleInputChange}></GeneralInfo>
+      <div className="genInfo">
+        <div className="contacts">
+          <p className="email">Email: {values.email}</p>
+          <p className="phone-number">Mobile: {values.phoneNumber} </p>
+        </div>
+        <p className="name">
+          {values.lastName}, {values.firstName}
+        </p>
+        <p className="title">{values.title}</p>
+      </div>
       <p className="educ-title">EDUCATIONAL BACKGROUND</p>
       <hr></hr>
       <div className="educBG">

@@ -7,3 +7,12 @@ body {
     background-repeat: no-repeat;
     background-color: #012A4A;
 }
+
+.forms {
+    background-color: #f8f7ff;
+    width: fit-content;
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 15px;
+    color: #091103;
+}
