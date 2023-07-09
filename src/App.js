@@ -19,6 +19,7 @@ class App extends Component {
 
     this.state = {
       values: this.genInfo,
+      schools: [],
     };
   }
 
@@ -32,7 +33,8 @@ class App extends Component {
       },
     }));
   };
-  render() {
+  render() 
+  {
     return (
       <div>
         <Title title="ResuBuilder" tagline="Craft Your CV with Ease"></Title>

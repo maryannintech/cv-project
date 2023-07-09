@@ -22,11 +22,11 @@ function PreviewCv({ values }) {
       <p className="educ-title">EDUCATIONAL BACKGROUND</p>
       <hr></hr>
       <div className="educBG">
-        <p className="school">School: </p>
-        <p className="position">Program:</p>
+        <p className="school">School: {values.school}</p>
+        <p className="position">Program: {values.program}</p>
         <div className="school-dates">
-          <p className="school-started">Date started: </p>
-          <p className="school-graduated">Date graduated: </p>
+          <p className="school-started">Date started:{values.started} </p>
+          <p className="school-graduated">Date graduated: {values.graduated}</p>
         </div>
       </div>
       <p className="exp-title">EXPERIENCE</p>

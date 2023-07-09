@@ -46,3 +46,15 @@ form {
     flex-wrap: wrap;
     gap: 10px;
 }
+
+form > button {
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #012A4A;
+    color: #ffff;
+    padding: 5px;
+    margin-top: 10px;
+}
