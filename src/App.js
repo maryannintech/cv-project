@@ -36,15 +36,17 @@ class App extends Component {
     return (
       <div>
         <Title title="ResuBuilder" tagline="Craft Your CV with Ease"></Title>
-        <div className="forms">
-          <GeneralInfo
-            values={this.state.values}
-            handleInputChange={this.handleInputChange}
-          ></GeneralInfo>
-          <EducationalBg></EducationalBg>
-          <ExperienceBg></ExperienceBg>
+        <div className="body">
+          <div className="forms">
+            <GeneralInfo
+              values={this.state.values}
+              handleInputChange={this.handleInputChange}
+            ></GeneralInfo>
+            <EducationalBg></EducationalBg>
+            <ExperienceBg></ExperienceBg>
+          </div>
+          <PreviewCv values={this.state.values}></PreviewCv>
         </div>
-        <PreviewCv values={this.state.values}></PreviewCv>
       </div>
     );
   }

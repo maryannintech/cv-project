@@ -10,9 +10,14 @@ body {
 
 .forms {
     background-color: #f8f7ff;
-    width: fit-content;
     padding: 30px;
     margin: 0 auto;
     border-radius: 15px;
     color: #091103;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
