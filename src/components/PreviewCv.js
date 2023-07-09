@@ -1,12 +1,30 @@
 import React from "react";
 import "../styles/PreviewCv.css";
 import "../styles/Fonts.css";
-import PassGenInfo from "./PassGenInfo";
+import { useState } from "react";
+import GeneralInfo from "./GeneralInfo";
 
 function PreviewCv() {
+  const genInfo = {
+    firstName: "",
+    lastName: "",
+    title: "",
+    email: "",
+    phoneNumber: "",
+  };
+
+  const [values, setValues] = useState(genInfo);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
   return (
     <div className="preview-cv">
-      <PassGenInfo></PassGenInfo>
+      <GeneralInfo values={values} handleInputChange={handleInputChange}></GeneralInfo>
       <p className="educ-title">EDUCATIONAL BACKGROUND</p>
       <hr></hr>
       <div className="educBG">

@@ -1,30 +1,11 @@
 import React from "react";
 import "../styles/Fonts.css";
 import "../styles/GeneralInfo.css";
-import { useState } from "react";
-import PassGenInfo from "./PassGenInfo";
+import GenPreview from "./GenPreview";
 
-function GeneralInfo() {
-  const genInfo = {
-    firstName: "",
-    lastName: "",
-    title: "",
-    email: "",
-    phoneNumber: "",
-  };
-
-  const [values, setValues] = useState(genInfo);
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-
-    setValues({
-      ...values,
-      [name]: value,
-    });
-  };
-
+function GeneralInfo({values, handleInputChange}) {
   return (
-    <div className="gen-form">
+    <div className="gen-form hide">
       <h1>PERSONAL INFORMATION</h1>
       <form>
         <div className="names">
@@ -79,7 +60,9 @@ function GeneralInfo() {
           ></input>
         </div>
       </form>
-      <PassGenInfo values={values} />
+      <div className="gen-preview">
+        <GenPreview values={values}></GenPreview>
+      </div>
     </div>
   );
 }

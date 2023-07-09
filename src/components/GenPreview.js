@@ -2,16 +2,18 @@ import React from "react";
 import "../styles/PreviewCv.css";
 import "../styles/Fonts.css";
 
-function GenPreview({email, mobile, firstname, lastname, title}) {
+function GenPreview({ values }) {
   return (
-      <div className="genInfo">
-        <div className="contacts">
-          <p className="email">Email: {email}</p>
-          <p className="phone-number">Mobile: {mobile} </p>
-        </div>
-        <p className="name">{lastname}, {firstname}</p>
-        <p className="title">{title}</p>
+    <div className="genInfo">
+      <div className="contacts">
+        <p className="email">Email: {values.email}</p>
+        <p className="phone-number">Mobile: {values.phoneNumber} </p>
       </div>
+      <p className="name">
+        {values.lastName}, {values.firstName}
+      </p>
+      <p className="title">{values.title}</p>
+    </div>
   );
 }
 
