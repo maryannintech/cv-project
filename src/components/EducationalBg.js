@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "../styles/Fonts.css";
 import "../styles/EducationalBg.css";
 
-function EducationalBg({ educFormValues, onChange }) {
+function EducationalBg({ onChange }) {
   const [educForms, setEducForms] = useState([]);
   const inputRefs = useRef([]);
 

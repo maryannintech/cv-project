@@ -20,6 +20,8 @@ class App extends Component {
     this.state = {
       values: this.genInfo,
       educFormValues: [],
+      expFormValues: [],
+      showPreview: false,
     };
   }
 
@@ -38,26 +40,45 @@ class App extends Component {
     this.setState({ educFormValues: educForms });
   };
 
+  handleExpFormChange = (expForms) => {
+    this.setState({ expFormValues: expForms });
+  };
+
+  handlePreviewToggle = () => {
+    this.setState((prevState) => ({
+      showPreview: !prevState.showPreview,
+    }));
+  };
+
   render() {
     return (
       <div>
         <Title title="ResuBuilder" tagline="Craft Your CV with Ease"></Title>
-        <div className="body">
-          <div className="forms">
-            <GeneralInfo
-              values={this.state.values}
-              handleInputChange={this.handleInputChange}
-            />
-            <EducationalBg
-              educFormValues={this.state.educFormValues}
-              onChange={this.handleEducFormChange}
-            />
-            <ExperienceBg />
-          </div>
+        <button className="preview-toggle" onClick={this.handlePreviewToggle}>
+          {this.state.showPreview ? "Show Form" : "Show Preview"}
+        </button>
+        {this.state.showPreview && (
           <PreviewCv
             values={this.state.values}
             educFormValues={this.state.educFormValues}
           />
+        )}
+        <div className="body">
+          {!this.state.showPreview && (
+            <>
+              <div className="forms">
+                <GeneralInfo
+                  values={this.state.values}
+                  handleInputChange={this.handleInputChange}
+                />
+                <EducationalBg
+                  educFormValues={this.state.educFormValues}
+                  onChange={this.handleEducFormChange}
+                />
+                <ExperienceBg />
+              </div>
+            </>
+          )}
         </div>
       </div>
     );
