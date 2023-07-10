@@ -1,92 +1,94 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Fonts.css";
 import "../styles/EducationalBg.css";
-import { useState } from "react";
-import PreviewCv from "./PreviewCv";
 
-function EducationalBg() {
+function EducationalBg({ educFormValues, onChange }) {
   const [educForms, setEducForms] = useState([]);
 
   const addEducForm = () => {
-    setEducForms([...educForms, <EducForm key={educForms.length} />]);
+    const updatedForms = [
+      ...educForms,
+      {
+        school: "",
+        program: "",
+        started: "",
+        graduated: ""
+      }
+    ];
+    setEducForms(updatedForms);
+    onChange(updatedForms); // Pass the updated forms back to the App component
   };
 
   const removeEducForm = () => {
-    setEducForms(educForms.slice(0, -1));
+    const updatedForms = educForms.slice(0, -1);
+    setEducForms(updatedForms);
+    onChange(updatedForms); // Pass the updated forms back to the App component
   };
 
-  const educBG = {
-    school: "",
-    program: "",
-    started: "",
-    graduated: "",
-  };
-
-  const [educValues, setEducBG] = useState(educBG);
-
-  const [schools, setSchools] = useState([]);
-
-  const handleChange = (e) => {
+  const handleFormChange = (index, e) => {
     const { name, value } = e.target;
-    setEducBG({
-      ...educValues,
-      [name]: value,
+    const updatedForms = educForms.map((form, i) => {
+      if (i === index) {
+        return {
+          ...form,
+          [name]: value
+        };
+      }
+      return form;
     });
+    setEducForms(updatedForms);
+    onChange(updatedForms); // Pass the updated forms back to the App component
   };
 
-  const onSubmitEduc = (e) => {
-    e.preventDefault();
-    setSchools([...schools, educValues]);
-    setEducBG(educBG);
-    console.log(schools);
-  };
-
-  function EducForm({ handleChange, onSubmitEduc }) {
+  function EducForm({ index }) {
     return (
-      <form onSubmit={onSubmitEduc}>
-        <label htmlFor="school-name">School attended: </label>
+      <form>
+        <label htmlFor={`school${index}`}>School attended: </label>
         <input
           type="text"
-          id="school-name"
+          id={`school${index}`}
           name="school"
           required
+          value={educForms[index].school}
+          onChange={(e) => handleFormChange(index, e)}
         ></input>
-        <label htmlFor="program-finished">Program: </label>
+        <label htmlFor={`program${index}`}>Program: </label>
         <input
           type="text"
-          id="program-finished"
+          id={`program${index}`}
           name="program"
-          value={educValues.program}
-          onChange={handleChange}
           required
+          value={educForms[index].program}
+          onChange={(e) => handleFormChange(index, e)}
         ></input>
-        <label htmlFor="start-date">Date started: </label>
+        <label htmlFor={`started${index}`}>Date started: </label>
         <input
           type="date"
-          id="start-date"
+          id={`started${index}`}
           name="started"
-          value={educValues.program}
-          onChange={handleChange}
           required
+          value={educForms[index].started}
+          onChange={(e) => handleFormChange(index, e)}
         ></input>
-        <label htmlFor="end-date">Date graduated: </label>
+        <label htmlFor={`graduated${index}`}>Date graduated: </label>
         <input
           type="date"
-          id="end-date"
+          id={`graduated${index}`}
           name="graduated"
-          value={educValues.started}
-          onChange={handleChange}
           required
+          value={educForms[index].graduated}
+          onChange={(e) => handleFormChange(index, e)}
         ></input>
-        <button type="submit">SUBMIT</button>
       </form>
     );
   }
+
   return (
     <div className="education-bg">
       <h1>EDUCATIONAL BACKGROUND</h1>
-      {educForms.map((educForm) => educForm)}
-      <EducForm handleChange={handleChange} onSubmitEduc={onSubmitEduc} />
+      {educForms.map((_, index) => (
+        <EducForm key={index} index={index} />
+      ))}
       <div className="educ-btns">
         <button className="add-educ" onClick={addEducForm}>
           ADD EDUCATION

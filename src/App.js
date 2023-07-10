@@ -19,7 +19,7 @@ class App extends Component {
 
     this.state = {
       values: this.genInfo,
-      schools: [],
+      educFormValues: [],
     };
   }
 
@@ -33,8 +33,12 @@ class App extends Component {
       },
     }));
   };
-  render() 
-  {
+
+  handleEducFormChange = (educForms) => {
+    this.setState({ educFormValues: educForms });
+  };
+
+  render() {
     return (
       <div>
         <Title title="ResuBuilder" tagline="Craft Your CV with Ease"></Title>
@@ -43,11 +47,17 @@ class App extends Component {
             <GeneralInfo
               values={this.state.values}
               handleInputChange={this.handleInputChange}
-            ></GeneralInfo>
-            <EducationalBg></EducationalBg>
-            <ExperienceBg></ExperienceBg>
+            />
+            <EducationalBg
+              educFormValues={this.state.educFormValues}
+              onChange={this.handleEducFormChange}
+            />
+            <ExperienceBg />
           </div>
-          <PreviewCv values={this.state.values}></PreviewCv>
+          <PreviewCv
+            values={this.state.values}
+            educFormValues={this.state.educFormValues}
+          />
         </div>
       </div>
     );
