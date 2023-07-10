@@ -38,9 +38,10 @@ function EducationalBg() {
     e.preventDefault();
     setSchools([...schools, educValues]);
     setEducBG(educBG);
+    console.log(schools);
   };
 
-  function EducForm({handleChange, onSubmitEduc}) {
+  function EducForm({ handleChange, onSubmitEduc }) {
     return (
       <form onSubmit={onSubmitEduc}>
         <label htmlFor="school-name">School attended: </label>
@@ -48,7 +49,6 @@ function EducationalBg() {
           type="text"
           id="school-name"
           name="school"
-          value={educBG.school}
           required
         ></input>
         <label htmlFor="program-finished">Program: </label>
@@ -56,7 +56,7 @@ function EducationalBg() {
           type="text"
           id="program-finished"
           name="program"
-          value={educBG.program}
+          value={educValues.program}
           onChange={handleChange}
           required
         ></input>
@@ -65,7 +65,7 @@ function EducationalBg() {
           type="date"
           id="start-date"
           name="started"
-          value={educBG.started}
+          value={educValues.program}
           onChange={handleChange}
           required
         ></input>
@@ -74,7 +74,7 @@ function EducationalBg() {
           type="date"
           id="end-date"
           name="graduated"
-          value={educBG.graduated}
+          value={educValues.started}
           onChange={handleChange}
           required
         ></input>
@@ -86,10 +86,7 @@ function EducationalBg() {
     <div className="education-bg">
       <h1>EDUCATIONAL BACKGROUND</h1>
       {educForms.map((educForm) => educForm)}
-      <EducForm
-        handleChange={handleChange}
-        onSubmitEduc={onSubmitEduc}
-      />
+      <EducForm handleChange={handleChange} onSubmitEduc={onSubmitEduc} />
       <div className="educ-btns">
         <button className="add-educ" onClick={addEducForm}>
           ADD EDUCATION
@@ -98,7 +95,6 @@ function EducationalBg() {
           REMOVE EDUCATION
         </button>
       </div>
-
     </div>
   );
 }
