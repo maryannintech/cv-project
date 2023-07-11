@@ -7,7 +7,6 @@ function EducationalBg({ onChange }) {
   const inputRefs = useRef([]);
 
   useEffect(() => {
-    // Create refs for input fields dynamically based on the educForms length
     inputRefs.current = Array(educForms.length)
       .fill()
       .map((_, i) => inputRefs.current[i] || React.createRef());
