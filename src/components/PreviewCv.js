@@ -49,7 +49,7 @@ function PreviewCv({ values, educFormValues, expFormValues }) {
                 Started working: {expForm.started} &nbsp;
               </p>
               <p className="company-ended">
-                Ended working: {expForm.ended}{" "}
+                Ended working: {expForm.ended}
               </p>
             </div>
           </div>
