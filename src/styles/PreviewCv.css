@@ -52,6 +52,10 @@
     margin: 0;
 }
 
+.exp-item > p {
+    margin: 0;
+}
+
 .expBG > p {
     margin: 0;
 }
