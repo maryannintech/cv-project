@@ -61,6 +61,7 @@ class App extends Component {
           <PreviewCv
             values={this.state.values}
             educFormValues={this.state.educFormValues}
+            expFormValues={this.state.expFormValues}
           />
         )}
         <div className="body">
@@ -71,11 +72,8 @@ class App extends Component {
                   values={this.state.values}
                   handleInputChange={this.handleInputChange}
                 />
-                <EducationalBg
-                  educFormValues={this.state.educFormValues}
-                  onChange={this.handleEducFormChange}
-                />
-                <ExperienceBg />
+                <EducationalBg onChange={this.handleEducFormChange} />
+                <ExperienceBg onChange={this.handleExpFormChange} />
               </div>
             </>
           )}

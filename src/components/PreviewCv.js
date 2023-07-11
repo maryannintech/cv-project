@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/PreviewCv.css";
 import "../styles/Fonts.css";
 
-function PreviewCv({ values, educFormValues }) {
+function PreviewCv({ values, educFormValues, expFormValues }) {
   if (!values || !educFormValues) {
     // Handle the case when values is undefined or falsy
     return null;
@@ -27,7 +27,9 @@ function PreviewCv({ values, educFormValues }) {
             <p className="school">School: {educForm.school}</p>
             <p className="program">Program: {educForm.program}</p>
             <div className="school-dates">
-              <p className="school-started">Date started: {educForm.started} &nbsp;</p>
+              <p className="school-started">
+                Date started: {educForm.started} &nbsp;
+              </p>
               <p className="school-graduated">
                 Date graduated: {educForm.graduated}
               </p>
@@ -38,12 +40,13 @@ function PreviewCv({ values, educFormValues }) {
       <p className="exp-title">EXPERIENCE</p>
       <hr></hr>
       <div className="expBG">
-        <p className="company-name">Company: </p>
-        <p className="position">Position: </p>
-        <p className="location-company">Location: </p>
+        <p className="company-name">Company: {expFormValues.companyName}</p>
+        <p className="position">Position: {expFormValues.position} </p>
         <div className="company-dates">
-          <p className="company-started">Started working: &nbsp;</p>
-          <p className="company-ended">Ended working: </p>
+          <p className="company-started">
+            Started working: {expFormValues.started} &nbsp;
+          </p>
+          <p className="company-ended">Ended working: {expFormValues.ended} </p>
         </div>
       </div>
     </div>

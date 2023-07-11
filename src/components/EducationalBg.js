@@ -20,8 +20,8 @@ function EducationalBg({ onChange }) {
         school: "",
         program: "",
         started: "",
-        graduated: ""
-      }
+        graduated: "",
+      },
     ];
     setEducForms(updatedForms);
     onChange(updatedForms);
@@ -30,7 +30,7 @@ function EducationalBg({ onChange }) {
   const removeEducForm = () => {
     const updatedForms = educForms.slice(0, -1);
     setEducForms(updatedForms);
-    onChange(updatedForms); 
+    onChange(updatedForms);
   };
 
   const handleFormChange = (index, e) => {
@@ -39,13 +39,13 @@ function EducationalBg({ onChange }) {
       if (i === index) {
         return {
           ...form,
-          [name]: value
+          [name]: value,
         };
       }
       return form;
     });
     setEducForms(updatedForms);
-    onChange(updatedForms); 
+    onChange(updatedForms);
   };
 
   return (
