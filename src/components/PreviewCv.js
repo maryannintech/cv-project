@@ -3,7 +3,7 @@ import "../styles/PreviewCv.css";
 import "../styles/Fonts.css";
 
 function PreviewCv({ values, educFormValues, expFormValues }) {
-  if (!values || !educFormValues) {
+  if (!values || !educFormValues || !expFormValues) {
     // Handle the case when values is undefined or falsy
     return null;
   }
