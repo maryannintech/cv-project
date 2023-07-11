@@ -1,33 +1,39 @@
 body {
-    background-image: url(./svgs/body-bg.svg);
-    /* background by SVGBackgrounds.com */
-    background-position: center;
-    background-size: cover;
-    padding-bottom: 30px;
-    background-repeat: no-repeat;
-    background-color: #012A4A;
+  background-image: url(./svgs/body-bg.svg);
+  /* background by SVGBackgrounds.com */
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 30px;
+  background-repeat: no-repeat;
+  background-color: #012a4a;
 }
 
 .forms {
-    background-color: #f8f7ff;
-    padding: 30px;
-    margin: 10px auto;
-    border-radius: 15px;
-    color: #091103;
-    width: fit-content;
+  background-color: #f8f7ff;
+  padding: 30px;
+  margin: 10px auto;
+  border-radius: 15px;
+  color: #091103;
+  width: fit-content;
 }
 
 .preview-toggle {
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    background-color: #012A4A;
-    color: #ffff;
-    padding: 10px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin: 5px auto;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: #012a4a;
+  color: #ffff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+  transition: background-color 0.3s ease;
+}
+
+.preview-toggle:hover {
+  background-color: #a9d6e5;
+  color: #091103;
 }
