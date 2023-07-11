@@ -3,7 +3,7 @@ import "../styles/Fonts.css";
 import "../styles/GeneralInfo.css";
 import PreviewCv from "./PreviewCv";
 
-function GeneralInfo({values, handleInputChange}) {
+function GeneralInfo({ values, handleInputChange }) {
   if (!values) {
     // Handle the case when values is undefined or falsy
     return null;

@@ -2,8 +2,7 @@ import React from "react";
 import "../styles/Title.css";
 import "../styles/Fonts.css";
 
-function Title({title, tagline}) {
-
+function Title({ title, tagline }) {
   return (
     <div className="app-name">
       <div className="container">
