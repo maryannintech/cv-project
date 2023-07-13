@@ -44,6 +44,7 @@ function PreviewCv({ values, educFormValues, expFormValues }) {
           <div key={index} className="exp-item">
             <p className="company-name">Company: {expForm.companyName}</p>
             <p className="position">Position: {expForm.position} </p>
+            <p className="tasks">Tasks: {expForm.tasks}</p>
             <div className="company-dates">
               <p className="company-started">
                 Started working: {expForm.started} &nbsp;
